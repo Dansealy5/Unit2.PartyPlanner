@@ -84,8 +84,6 @@ async function deleteEvent(id) {
   }
 
 function renderEvents() {
-    // const eventList = document.querySelector("#eventList")
-
     if (!state.events.length) {
         eventList.innerHTML = `<Li>-No Events-</Li>`;
         return;
@@ -112,28 +110,3 @@ function renderEvents() {
 
     eventList.replaceChildren(...eventCards);
 }
-    // event.preventDefault();
-
-    // const event = {
-    //     name: form.eventName.value,
-    //     description: form.description.value,
-    //     date: newDate(form.date.value),
-    //     location: form.location.value,
-    // };
-
-    // await addEvent(event);
-    // render()
-// async function createEvent(name, description, date, location) {
-//     try {
-//         const response = await fetch(API_URL, {
-//             method: "POST",
-//             headers: {"Content-Type": "application/json"},
-//             body: JSON.stringify({name, description, date, location})
-//         })
-//         const json = await response.json()
-//         console.log(json);
-//         render()
-//     } catch (error) {
-//         console.error(error)
-//     }
-// }
